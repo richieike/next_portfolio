@@ -1,0 +1,142 @@
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1024px)  and (max-device-height: 1080px) {
+  .container {
+    right: 100px;
+    overflow-x: hidden; /* Hide vertical scrollbar */
+    overflow-y: hidden;
+  }
+  .middleMessage{
+    height: -100px;
+  }
+  .main {
+    height: 0px;
+
+ 
+  }
+
+  #parent{
+    position:relative;
+    overflow-x: hidden; /* Hide vertical scrollbar */
+    overflow-y: hidden;
+  }
+  
+  .overlay {
+    position: fixed; /* Sit on top of the page content */
+    /*display: none;  Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer;  Add a pointer on hover */
+  }
+
+  
+  .powerButton {
+    position: relative;
+    bottom: -320px;
+    left: 375px;
+    padding: 30px 25px;
+  }
+
+  .powerButton:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  
+  }
+
+/*For Tablet Devices*/
+  @media only screen  and (min-width : 601px) and (max-device-height: 800px) {
+    .container {
+      min-height: 10vh;
+      padding: 0 0.5rem;
+  
+    }
+    
+    .main {
+      padding: 5rem 0;
+   
+
+    }
+    
+    
+    #parent{
+      position:relative;
+      width: 100%;
+      height: 100%;
+
+    }
+    
+    .overlay {
+      position: fixed; /* Sit on top of the page content */
+      /*display: none;  Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      overflow-y: hidden; /* Hide vertical scrollbar */
+      /*cursor: pointer;  Add a pointer on hover */
+    }
+    
+    }
+  
+    /*For Mobile Devices*/
+  @media only screen  and (min-width : 360px) and (max-device-height: 896px) {
+    .container {
+      min-height: 10vh;
+      font-size: 25%;
+      padding: 0 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content:inherit;
+      align-items: center;
+      position: absolute;
+      top: 1px;
+      left: 10px;
+    }
+    
+    .main {
+      padding: 5rem 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content:inherit;
+      align-items: center;
+      position: relative;
+    
+      font-size: 0.75rem;
+    }
+    
+    .teacupcontainer{
+      position: absolute;
+      right: 0px;
+    }
+    
+    #parent{position:relative;}
+    
+    .overlay {
+      position: fixed; /* Sit on top of the page content */
+      /*display: none;  Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      /*cursor: pointer;  Add a pointer on hover */
+    }
+    
+    }
+  
+    
+  

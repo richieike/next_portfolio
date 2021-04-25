@@ -1,0 +1,58 @@
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0);
+    transform: translatey(-2px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.0);
+    transform: translatey(0px);
+  }
+}
+
+
+  .container {
+    font-family: "LazenbyComp";
+  src: url("/fonts/LazenbyComp/LazenbyComp-Smooth.ttf");
+  font-style: normal;
+  font-display: swap;
+    position:absolute;
+    top:250px;
+    cursor: pointer;
+    background:transparent;
+    z-index: 11;
+ 
+  }
+
+
+.typewriter  {
+ 
+ font-size: 1rem;
+ color: #1fec04;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .50em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  
+  animation: 
+    typing 5.1s steps(30, end) infinite, 
+    blink-caret .5s step-end infinite,
+    float 0.3s ease-in-out infinite;
+}
+
+  /* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(247, 246, 244)}
+
+}

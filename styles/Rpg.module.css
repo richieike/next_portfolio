@@ -1,0 +1,126 @@
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0);
+    transform: translatey(-2px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes content-link-load{
+  0%{
+      opacity: 0.2;
+      transform: rotateX(-10deg);
+      
+  }
+  90%{
+    opacity: 0.9;
+    transform: rotateX(-8deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+
+.mapPosition{
+  position: relative;
+  right: 0px;
+  top: 0px;
+  
+}
+
+.mapPosition:active{
+  opacity: 0.2;
+  animation-name: content-link-load;
+      animation-duration: var(--content-load-time);
+      animation-timing-function: ease-in-out;
+      animation-delay: 500ms;
+      animation-fill-mode: forwards;
+      transform:rotateX(0);
+     
+}
+
+.tilecontainer{
+  z-index: 106;
+}
+
+.mapcontainer{
+  overflow: hidden;
+  position: relative;
+  width: 550px;
+  right: -30px;
+  height: 400px;
+  top: -370px;
+  box-sizing: border-box;
+  border: 4px solid white;
+}
+
+.toolbartextcontainer{
+  position: absolute;
+
+  width: 375px;
+  height:100px;
+  bottom: -35px;
+  right: 0px;
+  animation: float 0.3s ease-in-out infinite;
+  color:#d5ec04;
+
+  font-family: "LazenbyComp";
+
+  font-style: normal;
+  font-display: swap;
+  font-size: 1.5rem;
+  z-index: 102;
+}
+
+.musicButton {
+  position: absolute;
+  bottom: -10px;
+  right:-30px;
+  z-index: 103;
+}
+
+.zonecontainer {
+  top: -300px;
+  left: -230px;
+  opacity: 0.8;
+  box-sizing: border-box;
+  border: 4px solid white;
+  margin: 0.8rem auto;
+  width: 550px;
+  height: 400px;
+ 
+  position: absolute;
+  overflow: hidden;
+}
+
+.row {
+  display: "flex";
+  line-height: 32px;
+  height: 32px;
+}
+
+.keysContainer{
+  position: absolute;
+  right: 400px;
+  bottom: -20px;
+  z-index: 101;
+}
+
+.input[type="text"] {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #333;
+  padding: 8px 52px 8px 10px;
+  transition: all 200ms ease;
+}

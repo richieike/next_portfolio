@@ -1,0 +1,68 @@
+@keyframes glowRed{
+  from {
+    box-shadow: 0 0 10px -10px rgb(252, 0, 0);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgb(252, 0, 0);
+  }
+}
+@keyframes glowWhite{
+  from {
+    box-shadow: 0 0 10px -10px rgb(252, 252, 252);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+  }
+}
+@keyframes glowGreen{
+  from {
+    box-shadow: 0 0 10px -10px #1fec04;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #1fec04;
+  }
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius:100px;
+    flex-grow: 1;
+    animation: glowGreen 1s infinite alternate;
+  }
+  
+  .btnContainer:hover{
+    animation: glowWhite 1s infinite alternate;
+    cursor: pointer;
+  }
+
+  .musicbtnPressed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius:100px;
+    flex-grow: 1;
+    animation: glowRed 1s infinite alternate;
+    cursor: pointer;
+  }
+  .btnContainerPressed{
+    background-color: blanchedalmond;
+    border-radius: 100px;
+ 
+    animation: glowRed 1s infinite alternate;
+    cursor: pointer;
+  }
+
+  .btnPlay {
+    cursor: pointer;
+   
+  }
+  
+  .btnStop {
+    cursor: pointer;
+  }

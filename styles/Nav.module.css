@@ -1,0 +1,58 @@
+@keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0);
+      transform: translatey(-2px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0);
+      transform: translatey(0px);
+    }
+  }
+  
+.nav{
+  font-family: "LazenbyComp";
+  src: url("/fonts/LazenbyComp/LazenbyComp-Smooth.ttf");
+  font-style: normal;
+  font-display: swap;
+    box-shadow: black;
+    height: 430px;
+    background-color: transparent;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    animation: float 0.3s ease-in-out infinite;
+    z-index: 10;
+  
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #1fec04;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    height: auto;
+    margin: 5px 10px;
+    padding: 0;
+    font-size: 1rem;
+    color: #1fec04;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    transform: scale(1);
+ 
+}
+.nav ul li a:hover {
+   cursor: pointer;
+    height:auto;
+    transition: all .4s ease-in-out;
+    color: #1fec04;
+    transform: scale(1.5);
+}
