@@ -1,5 +1,5 @@
 import React from 'react'
-import Sprite from '../sprite';
+import Sprite from '../sprite/Index';
 
  function Actor ({sprite, data, position = {x:0, y:0}, step = 0, dir = 0}) {
 
