@@ -13,16 +13,16 @@ const Nav = ({rollover, stop}) => {
     const [isAboutMe, setIsAboutMe] = useState(false);
     const [isChatApp, setIsChatApp] = useState(false);
     const [isCovidApp, setIsCovidApp] = useState(false);
-    const [isRpgGame, setIsRpgGame] = useState(false);
+    
 
 
-    //
+    // used for conditional rendering
     const onAboutMeClick  = useCallback( (e) =>{
        setIsHome(false);
         setIsAboutMe(true);
         setIsChatApp(false);
         setIsCovidApp(false);
-        setIsRpgGame(false);
+       
     }, []);
 
     const onHomeClick  = useCallback( (e) =>{
@@ -30,7 +30,7 @@ const Nav = ({rollover, stop}) => {
         setIsAboutMe(false);
         setIsChatApp(false);
         setIsCovidApp(false);
-        setIsRpgGame(false);
+    
     }, []);
 
     const onChatAppClick  = useCallback( (e) =>{
@@ -38,7 +38,7 @@ const Nav = ({rollover, stop}) => {
         setIsAboutMe(false);
         setIsChatApp(true);
         setIsCovidApp(false);
-        setIsRpgGame(false);
+      
     }, []);
 
     const onCovidAppClick  = useCallback( (e) =>{
@@ -46,16 +46,10 @@ const Nav = ({rollover, stop}) => {
         setIsAboutMe(false);
         setIsChatApp(false);
         setIsCovidApp(true);
-        setIsRpgGame(false);
+     
     }, []);
 
-    const onRpgGameClick  = useCallback( (e) =>{
-        setIsHome(false);
-        setIsAboutMe(false);
-        setIsChatApp(false);
-        setIsCovidApp(false);
-        setIsRpgGame(true);
-    }, []);
+  
 
     return (
         <>
@@ -133,22 +127,7 @@ const Nav = ({rollover, stop}) => {
                  </li>
                  
              </ul>):(null)}
-             {!isRpgGame?(<ul >
-                 <li onMouseEnter ={() => {
-                     setIsHovering(true);
-                      rollover();
-                     }}
-                     onMouseLeave ={() => {
-                         setIsHovering(false);
-                          stop();
-                         }}
-                     
-                 >
-                     <nav onClick = {onRpgGameClick}><Link scroll={false} href = '/rpggame'>RPG Beta </Link> </nav>
-                 
-                 </li>
-                 
-             </ul>):(null)}
+            
         </nav>
         </>
        
