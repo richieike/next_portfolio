@@ -110,7 +110,7 @@ const covidapp = ({ googleApiKeyforApp }) => {
             }
             
             `}</style>
-        <img src={AppContainer} loading="lazy" alt="AppContainer" width="850" height="600"></img>
+    
       </div>
          
       <div className={appstyles.container}>
