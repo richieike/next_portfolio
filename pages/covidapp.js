@@ -95,7 +95,7 @@ const covidapp = ({ googleApiKeyforApp }) => {
 
     <>
       <Meta title="COVID app" />
-      <div>
+      <div className = {appstyles.wholeappcontainer} >
       <div className={appstyles.borderFrame}>
         <style jsx global>{`
       
@@ -110,7 +110,7 @@ const covidapp = ({ googleApiKeyforApp }) => {
             }
             
             `}</style>
-    
+        
       </div>
          
       <div className={appstyles.container}>
