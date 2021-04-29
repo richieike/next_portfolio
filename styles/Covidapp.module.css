@@ -13,95 +13,356 @@
       transform: rotateX(0);
     }
   }
+
+    
+  #parent{
+    position:relative;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  }
   
-  
-  .container {
+.bgContainer{
+  position: absolute;
+  top: -10px;
+  width: 610px;
+  left: -20px;
+  height: 410px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+  .container{
+      position: relative;
+      top: -345px;
+      left: 50px;
+      width: 580px;
+      font-size: 1rem;
+      color: #000000;
     --content-load-time: 900ms;
-      width: 550px;
-      height: 500px;
-      justify-content: center;
-      position: relative;
-      top:-355px;
-      right: -50px;
-      font-size: 1rem;
+    animation-name: content-link-load;
+    animation-duration: var(--content-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+    transform:rotateX(0);
+    opacity: 0;
+  }
+
+  .ce-chat-list {
+    background-color: rgb(240, 240, 240) !important;
+  }
   
-      background:transparent;
-      font-size: 1rem;
-      animation-name: content-link-load;
-      animation-duration: var(--content-load-time);
-      animation-timing-function: ease-in;
-      animation-delay: 200ms;
-      animation-fill-mode: forwards;
-      transform:rotateX(0);
-      opacity: 0;
-      z-index: 0;
-   
-    }
+  .ce-chats-container {
+    background-color: rgb(240, 240, 240) !important;
+  }
   
-    .borderFrame{
-      animation-name: content-link-load;
-      animation-duration: var(--content-load-time);
-      animation-timing-function: ease-in;
-      animation-delay: 800ms;
-      animation-fill-mode: forwards;
-      transform:rotateX(0);
-      opacity: 0;
-      position:absolute;
-      overflow-y: hidden; /* Hide vertical scrollbar */
+  .ce-active-chat-card {
+    background-color: #cabcdc !important;
+    border: 4px solid #cabcdc !important;
+    border-radius: 25px !important;
+  }
+  
+  .ce-chat-subtitle-text {
+    color: #595959 !important;
+  }
+  
+  .ce-chat-form-container {
+    padding-bottom: 20px !important;
+  }
+  
+  .ce-text-input {
+
+    border-radius: 6px !important;
+    border: 1px solid #3b2a50 !important;
+  }
+  
+  .ce-primary-button {
+    border-radius: 6px !important;
+    background-color: #7554a0 !important;
+    position: relative;
+    bottom: 1px;
+  }
+  
+  .ce-danger-button {
+    background-color: white !important;
+    border-radius: 22px !important;
+  }
+  
+  .ce-settings {
+    background-color: rgb(240, 240, 240) !important;
+  }
+  
+  .ce-autocomplete-input {
+    border-radius: 6px !important;
+    border: 1px solid #3b2a50 !important;
+  }
+  
+  .ce-autocomplete-options {
+    border-radius: 6px !important;
+    border: 1px solid #3b2a50 !important;
+    background-color: white !important;
+  }
+  
+  .ce-chat-settings-container {
+    padding-top: 12px !important;
+  }
+  
+  .ce-chat-avatars-row {
+    display: none !important;
+  }
+  
+  /* CUSTOM FEED */
+  
+  .chatfeed {
+  
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .chattitlecontainer {
+    width: calc(100% - 36px);
+    padding: 18px;
+    text-align: center;
+  }
+  
+  .chattitle {
+    color: #5c8fbe;
+    font-weight: 800;
+    font-size: 24px;
+  }
+  
+  .chatsubtitle {
+    color: #5c8fbe;
+    font-weight: 600;
+    font-size: 12px;
+    padding-top: 4px;
+  }
+  
+  .messagerow {
+    float: left;
+    width: 100%;
+    display: flex;
+    margin-left: 18px;
+  }
+  
+  .messageblock {
+    width: 100%;
+    display: inline-block;
+  
+  }
+  
+  .messageavatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 42px;
+  }
+  
+  .message {
+    padding: 12px;
+    font-size: 1.5 rem;
+    border-radius: 6px;
+    max-width: 80%;
+  }
+  
+  .messageimage {
+    margin-right: 18px;
+    object-fit: cover;
+    border-radius: 6px;
+    height: 30vw;
+    /* width: 30vw; */
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 100px;
+    min-width: 100px;
+  }
+  
+  .readreceipts {
+    position: relative;
+    bottom: 6px;
+  }
+  
+  .readreceipt {
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    margin: 1.5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+  }
+  
+  .messageformcontainer {
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 36px);
+    padding: 18px;
+    background-color: rgb(240, 240, 240);
+  }
+  
+  .messageform {
+    overflow: hidden;
+    position: relative;
+    bottom: -15px;
+    left: -18px;
+    width: 275px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #3b2a50;
+    background-color: white;
+  }
+  
+  .messageinput {
+    font-family: "LazenbyComp";
+    src: url("/fonts/LazenbyComp/LazenbyComp-Liquid.ttf");
+    font-style: normal;
+    font-display: swap;
+    position: absolute;
+    height: 40px;
+    width: calc(100% - 132px);
+    background-color: white;
+    border: 10px solid white;
+    padding: 0px 18px;
+    outline: none;
+    font-size: 1rem;
     
-      bottom: 450px;
-      left: -105px;
-    }
-
-    .nhslogo{
-      position: absolute;
-      bottom: 110px;
-      left: 2px;
-      z-index: 1;
-     
-    
-    }
-
-    .searchContainer{
-      position: inherit;
-      left: -400px;
-      bottom: 290px;
-      z-index: 2;
-      
-    }
-    .search{
-      position: relative;
-      top: 42px;
-      right:-58px;
-      
-      
+  }
   
-    }
+  .imagebutton {
+    cursor: pointer;
+    padding: 0px 12px;
+    height: 100%;
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+    z-index: 2;
+  }
+  
+  .sendbutton {
+    height: 42px;
+    background-color: white;
+    border: 1px solid white;
+    padding: 0px 18px;
+    cursor: pointer;
+    position: absolute;
+    right: -18px;
+    bottom: 15px;
+  }
+  
+  .sendicon {
+    top: 1px;
+    position: relative;
+    transform: rotate(-90deg);
+  }
+  
+  .pictureicon {
+    top: 1px;
+    position: relative;
+    font-size: 14px;
+  }
+  
+  /* FORM STYLES */
 
-    .search input{
-      font-family: "Roboto";
-      src: url("/fonts/Roboto/Roboto-Bold.ttf");
-      font-style: normal;
-      font-display: swap;
-      font-size: 1.1rem;
-      border-style: double;
-      border-color: #005EB8;
-      border-radius: 5px;
-      box-shadow:  0 0 10px 5px rgba(0,0,0,0.6);
-      -moz-box-shadow: 0 0 10px  5px rgba(0,0,0,0.6);
-      -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
-      -o-box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
-      
-    }
-    .covid19logo{
-      position: absolute;
-      top: -30px;
-      left: -10px;
-    }
+  
+  .wrapper {
+    position: absolute;
 
-    .compasContainer{
-      position: absolute;
-      top: 1px;
-      right: 5px;
-      cursor:pointer;
-    }
+    height: 60vh;
+    width: 100%;
+    font-family: "LazenbyComp";
+    src: url("/fonts/LazenbyComp/LazenbyComp-Liquid.ttf");
+    font-style: normal;
+    font-display: swap;
+    background:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input {
+    font-family: "LazenbyComp";
+    src: url("/fonts/LazenbyComp/LazenbyComp-Liquid.ttf");
+    font-style: normal;
+    font-display: swap;
+    color: #333;
+    font-size: 1.2rem;
+      margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    outline: none;
+    margin-bottom: 25px;
+  }
+  
+  .form {
+    width: 400px;
+  
+  }
+  
+  .title {
+    text-align: center;
+    color: #1fec04;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .guest{
+    text-align: center;
+    color: #1fec04;
+    font-size: 1.1rem;
+  }
+  .button {
+    font-family: "LazenbyComp";
+    src: url("/fonts/LazenbyComp/LazenbyComp-Liquid.ttf");
+    font-style: normal;
+    font-display: swap;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+    width: 90%;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .error {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+  }
